@@ -1,14 +1,14 @@
-body {
+.app {
+  height: 100%;
+  margin: auto;
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 
-  .field{
-    border:#404040;
+  .field {
     width:350px;
     height:350px;
-
+    border:#404040;
   }
 
 }

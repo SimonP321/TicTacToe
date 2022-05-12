@@ -25,13 +25,7 @@ Implementierung { fr, sa, so
 was ich gemacht habe {
 	1. Youtube Kurs zu ende geguckt
 	2. Mockups gesucht (tictactoe cool design; cool game fonts) {
-		gamedesign: https://www.crushpixel.com/big-static15/preview4/tic-tac-toe-game-linear-2152276.jpg
-		nice colors & background: https://miro.medium.com/max/1280/0*AFXD9LnMw8mFz3hV.png
-		clean: https://reactjsexample.com/content/images/2019/04/A-Tic-tac-toe.jpg
-		clean: https://miro.medium.com/max/1400/1*M2cD2WWFC8GHmGZ1o_cQLg.png
-		clean: https://techbytesonline.com/wp-content/uploads/2020/05/making-a-tic-tac-toe-game-in-modern-javascript-tutorial-with-es6.png
-		simple: https://i1.wp.com/blog.alexdevero.com/wp-content/uploads/2019/06/how-to-build-simple-tic-tac-toe-game-with-react-blog.jpg?fit=1024%2C635&ssl=1
-		farbe: #1c8fdf; #1373b7; #275789; #36b5f3; #54b5f4
+		farben: #1c8fdf; #1373b7; #275789; #36b5f3; #54b5f4
 		figma: https://www.figma.com/file/KLeXIHklYyCZempbq1Vlho/Untitled?node-id=0%3A1
 	}
 }
