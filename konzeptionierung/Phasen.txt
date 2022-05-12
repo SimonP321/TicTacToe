@@ -1,0 +1,37 @@
+Angular TicTacToe Projekt
+
+Analyse { mi, do
+1. gucken ob es unklarheiten in der anforderung gibt
+2. angular youtube kurs zu ende gucken
+3. Typescript vl. noch etwas vertiefen
+4. cookies (was ist das & wie implementiert man das)
+5. wie gehen unit tests (spec.ts datein im component)
+6. git/github hochladen und den link diamant schicken
+}
+
+Entwurf { do, fr
+1. Mockups erstellen
+2. klassendiagramm evtl. anwendungsfalldiagramm oder sonstiges noch dazu
+3. speichertyp festlegen (wahrscheinlich env datein (was sind env datein, wie setzt man sie ein und ließt sie aus, warum env nicht json oder db))
+4. was für eine verschlüsselung
+}
+
+Implementierung { fr, sa, so
+1. Klassen und methoden aus Klassendiagramm entnehmen
+2. unittests schreiben
+3. Methoden und Klassen mit logik füllen
+}
+
+was ich gemacht habe {
+	1. Youtube Kurs zu ende geguckt
+	2. Mockups gesucht (tictactoe cool design; cool game fonts) {
+		gamedesign: https://www.crushpixel.com/big-static15/preview4/tic-tac-toe-game-linear-2152276.jpg
+		nice colors & background: https://miro.medium.com/max/1280/0*AFXD9LnMw8mFz3hV.png
+		clean: https://reactjsexample.com/content/images/2019/04/A-Tic-tac-toe.jpg
+		clean: https://miro.medium.com/max/1400/1*M2cD2WWFC8GHmGZ1o_cQLg.png
+		clean: https://techbytesonline.com/wp-content/uploads/2020/05/making-a-tic-tac-toe-game-in-modern-javascript-tutorial-with-es6.png
+		simple: https://i1.wp.com/blog.alexdevero.com/wp-content/uploads/2019/06/how-to-build-simple-tic-tac-toe-game-with-react-blog.jpg?fit=1024%2C635&ssl=1
+		farbe: #1c8fdf; #1373b7; #275789; #36b5f3; #54b5f4
+		figma: https://www.figma.com/file/KLeXIHklYyCZempbq1Vlho/Untitled?node-id=0%3A1
+	}
+}
