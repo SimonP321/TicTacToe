@@ -3,26 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TictactoeBoardComponent } from './shared/components/tictactoe-board/tictactoe-board.component';
-import { TictactoeBoardSquareComponent } from './shared/components/tictactoe-board-square/tictactoe-board-square.component';
-import { RegisterUserComponent } from './shared/components/register-user/register-user.component';
+import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
+import { TictactoeComponent } from './shared/components/tictactoe/tictactoe/tictactoe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TictactoeBoardComponent,
-    TictactoeBoardSquareComponent,
-    RegisterUserComponent
+    DashboardComponent,
+    TictactoeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

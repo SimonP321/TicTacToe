@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterUserComponent } from './register-user.component';
+import { TictactoeComponent } from './tictactoe.component';
 
-describe('RegisterUserComponent', () => {
-  let component: RegisterUserComponent;
-  let fixture: ComponentFixture<RegisterUserComponent>;
+describe('TictactoeComponent', () => {
+  let component: TictactoeComponent;
+  let fixture: ComponentFixture<TictactoeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterUserComponent ]
+      declarations: [ TictactoeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterUserComponent);
+    fixture = TestBed.createComponent(TictactoeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
