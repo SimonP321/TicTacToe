@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { AuthorizationService } from 'src/app/core/authorization.service';
-import { environment } from 'src/environments/environment';
-import { ILogin } from '../../models/ILogin';
+import { AuthorizationService } from 'src/app/core/services/authorization/authorization.service';
+import { ILogin } from '../../models/interfaces/ILogin';
 
 @Component({
   selector: 'app-login',

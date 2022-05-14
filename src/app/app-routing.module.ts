@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorizationGuard } from './features/guards/authorization.guard';
+import { AuthorizationGuard } from './features/guards/authorization/authorization.guard';
 import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { TictactoeComponent } from './shared/components/tictactoe/tictactoe/tictactoe.component';

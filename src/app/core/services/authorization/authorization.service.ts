@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { ILogin } from 'src/app/shared/models/interfaces/ILogin';
 import { environment } from 'src/environments/environment';
-import { ILogin } from '../shared/models/ILogin';
 
 @Injectable({
   providedIn: 'root'

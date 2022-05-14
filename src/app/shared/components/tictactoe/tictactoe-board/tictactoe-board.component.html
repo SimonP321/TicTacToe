@@ -1,1 +1,15 @@
-<p>tictactoe-board works!</p>
+<div class="tictactoe-board">
+    <div *ngFor="let squareContainer of squares; index as r" class="square-container">
+        <div *ngFor="let squareClass of squareContainer; index as c">
+
+            <div class="square" (click)="onChangePlayerTurn(squareClass)">
+                <ng-container [ngSwitch]='squareClass.state'> <!-- muss man wirklich binden? eigentlich schon oder? also [ngIf] -->
+                    <img *ngSwitchCase="squareClass.stateRef.USERONE" src="../../../../../assets/symbols/kreis.png">
+                    <img *ngSwitchCase="squareClass.stateRef.USERTWO" src="../../../../../assets/symbols/kreuz.png">
+                </ng-container>
+            </div>
+
+            <!-- <app-tictactoe-board-square (onChangePlayerTurn)="onChangePlayerTurn($event)" [square]="{state: column, row: r, column: c}"></app-tictactoe-board-square> -->
+        </div>
+    </div>
+</div>

@@ -8,20 +8,23 @@ import { LoginComponent } from './shared/components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { TictactoeComponent } from './shared/components/tictactoe/tictactoe/tictactoe.component';
+import { TictactoeBoardComponent } from './shared/components/tictactoe/tictactoe-board/tictactoe-board.component';
+import { TictactoeBoardSquareComponent } from './shared/models/tictactoe/tictactoe-board-square';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    TictactoeComponent
+    TictactoeComponent,
+    TictactoeBoardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, TictactoeBoardSquareComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

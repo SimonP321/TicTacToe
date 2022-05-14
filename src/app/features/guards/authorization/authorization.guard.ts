@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthorizationService } from 'src/app/core/authorization.service';
+import { AuthorizationService } from 'src/app/core/services/authorization/authorization.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class AuthorizationGuard implements CanActivate {
         this.router.navigate(['login']);
       }
 
-      this.authService.removeAuthorization();
+      /* this.authService.removeAuthorization(); */ // TODO with timer (vl. observable)
       return isAuth;
   }
   
