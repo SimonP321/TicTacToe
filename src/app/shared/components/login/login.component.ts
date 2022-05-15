@@ -19,9 +19,6 @@ export class LoginComponent implements OnInit {
   onLogin(form: NgForm) {
     let loginForm = form.value as ILogin;
     this.authService.login(loginForm);
-
-    /* this.cookies.deleteAll(); */ // TODO
-    /* if (password == json(password)) */ // TODO
   }
 
 }

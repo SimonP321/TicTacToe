@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { TictactoeComponent } from './shared/components/tictactoe/tictactoe/tictactoe.component';
 import { TictactoeBoardComponent } from './shared/components/tictactoe/tictactoe-board/tictactoe-board.component';
-import { TictactoeBoardSquareComponent } from './shared/models/tictactoe/tictactoe-board-square';
+import { TictactoeSquare } from './shared/models/tictactoe/tictactoe-board-square';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { TictactoeBoardSquareComponent } from './shared/models/tictactoe/tictact
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CookieService, TictactoeBoardSquareComponent],
+  providers: [CookieService, TictactoeSquare],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

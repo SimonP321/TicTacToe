@@ -1,7 +1,6 @@
-import { IUser } from 'src/app/shared/models/interfaces/IUser';
 import { State } from 'src/app/shared/models/enums/ESquare';
 
-export class TictactoeBoardSquareComponent implements IUser {
+export class TictactoeSquare {
 
   state: State = State.EMPTY;
   row: number = 0;

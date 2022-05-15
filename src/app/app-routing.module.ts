@@ -6,10 +6,10 @@ import { LoginComponent } from './shared/components/login/login.component';
 import { TictactoeComponent } from './shared/components/tictactoe/tictactoe/tictactoe.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthorizationGuard] },
-  { path: 'tictactoe', component: TictactoeComponent, canActivate: [AuthorizationGuard] },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'tictactoe/:userOne/:symbolOne/:userTwo/:symbolTwo', component: TictactoeComponent, canActivate: [AuthorizationGuard] },
   { path: '**', redirectTo: 'login' }
 ];
 

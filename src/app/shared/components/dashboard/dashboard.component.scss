@@ -17,6 +17,8 @@
         .user {
             display: flex;
             text-align: left;
+        
+
             .userOne {
                 display: flex;
                 flex-direction: column;
@@ -26,6 +28,10 @@
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
+            }
+
+            .symbolCollection {
+                
             }
         }
     }

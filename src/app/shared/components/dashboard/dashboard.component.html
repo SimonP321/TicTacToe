@@ -1,31 +1,27 @@
 <div class="dashboard">
-    <form (ngSubmit)="onPlay()">
+    <form (ngSubmit)="onPlay(dashboardForm)" #dashboardForm="ngForm">
         <div class="user">
             <div class="userOne">
                 Spieler1
-                <label for="name">Name</label>
-                <input name="name" type="text">
-                <label for="symbol">Symbol</label>
-                <select name="symbol">
-                    <!-- iterate through every symbolImage -->
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                <label>Name</label>
+                <input type="text" name="userOne" ngModel>
+                <label>Symbol</label>
+                <select class="symbolCollection" name="symbolOne" ngModel>
+                    <ng-container *ngFor="let image of images">
+                        <option>{{image.name}}</option>
+                    </ng-container>
                 </select>
             </div>
 
             <div class="userTwo">
                 Spieler2
-                <label for="name">Name</label>
-                <input name="name" type="text">
-                <label for="symbol">Symbol</label>
-                <select name="symbol">
-                    <!-- iterate through every symbolImage -->
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                <label>Name</label>
+                <input type="text"  name="userTwo" ngModel>
+                <label>Symbol</label>
+                <select class="symbolCollection" name="symbolTwo" ngModel>
+                    <ng-container *ngFor="let image of images">
+                        <option>{{image.name}}</option>
+                    </ng-container>
                 </select>
             </div>
         </div>
