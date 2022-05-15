@@ -2,11 +2,11 @@
     <form (ngSubmit)="onPlay(dashboardForm)" #dashboardForm="ngForm">
         <div class="user">
             <div class="userOne">
-                Spieler1
+                <label class="title">Spieler 1</label>
                 <label>Name</label>
                 <input type="text" name="userOne" ngModel>
-                <label>Symbol</label>
-                <select class="symbolCollection" name="symbolOne" ngModel>
+                <label class="symbol">Symbol</label>
+                <select name="symbolOne" ngModel>
                     <ng-container *ngFor="let image of images">
                         <option>{{image.name}}</option>
                     </ng-container>
@@ -14,11 +14,11 @@
             </div>
 
             <div class="userTwo">
-                Spieler2
+                <label class="title">Spieler 2</label>
                 <label>Name</label>
                 <input type="text"  name="userTwo" ngModel>
-                <label>Symbol</label>
-                <select class="symbolCollection" name="symbolTwo" ngModel>
+                <label class="symbol">Symbol</label>
+                <select name="symbolTwo" ngModel>
                     <ng-container *ngFor="let image of images">
                         <option>{{image.name}}</option>
                     </ng-container>
@@ -26,6 +26,6 @@
             </div>
         </div>
 
-        <input type="submit" value="Spielen">
+        <input type="submit" value="Spiel starten">
     </form>
 </div>

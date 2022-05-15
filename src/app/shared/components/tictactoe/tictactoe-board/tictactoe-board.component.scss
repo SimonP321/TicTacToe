@@ -1,12 +1,21 @@
+@import "../../../../utilities/variables.scss";
+
 .tictactoe-board {
+    box-shadow: 1px 5px 20px #00000015;
+    border-right: solid 1px $light-blue;
+    border-bottom: solid 1px $light-blue;
 
     .square-container {
     display: flex;
 
         .square {
-            width: 20px;
-            height: 20px;
-            border: solid 1px red;
+            width: 120px;
+            height: 120px;
+            border-top: solid 1px $light-blue;
+            border-left: solid 1px $light-blue;
+            background-color: #f0f2f2;
+            border-right: none;
+            border-bottom: none;
             display: flex;
 
             img {

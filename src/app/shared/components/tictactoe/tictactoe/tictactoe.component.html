@@ -1,4 +1,8 @@
 <div class="tictactoe">
-    TICTACTOE
-    <app-tictactoe-board></app-tictactoe-board>
+    <label class="title">TIC TAC TOE</label>
+    <div class="matchfield">
+        <label [class.userOne]="playerTurn == stateRef.USERONE">Spieler 1</label>
+        <app-tictactoe-board (onChangePlayerTurnChildEvent)="onChangePlayerTurn($event)"></app-tictactoe-board>
+        <label [class.userTwo]="playerTurn == stateRef.USERTWO">Spieler 2</label>
+    </div>
 </div>

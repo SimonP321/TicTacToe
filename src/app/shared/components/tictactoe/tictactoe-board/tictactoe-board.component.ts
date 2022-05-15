@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GameService } from 'src/app/core/services/tictactoe-game/game.service';
 import { State } from 'src/app/shared/models/enums/ESquare';
@@ -13,13 +13,16 @@ export class TictactoeBoardComponent implements OnInit {
 
   squareNumber: number = 9;
   squareRoot: number = Math.floor(Math.sqrt(this.squareNumber));
-  private turn: boolean = false;
+  playerOneTurn: boolean = false;
   readonly squares: TictactoeSquare[][] = [];
 
   userOne: string = "";
   symbolOne: string = "";
   userTwo: string = "";
   symbolTwo: string = "";
+  stateRef: typeof State = State;
+
+  @Output() public onChangePlayerTurnChildEvent = new EventEmitter();
 
   constructor(private game: GameService, private activatedRoute: ActivatedRoute) {
 
@@ -46,14 +49,16 @@ export class TictactoeBoardComponent implements OnInit {
     if (squareClass.state != State.EMPTY)
       return;
 
-      if (this.turn) {
+      // changes the player turn
+      if (this.playerOneTurn) {
         squareClass.state = State.USERONE;
-        this.turn = false;
+        this.playerOneTurn = false;
       } else {
         squareClass.state = State.USERTWO;
-        this.turn = true;
+        this.playerOneTurn = true;
       }
 
+      // checks if someone won
       let checkWinner = this.game.checkIfSomeoneWins(this.squares);
       if (checkWinner != State.EMPTY) {
         let message = "Spieler ";
@@ -69,11 +74,15 @@ export class TictactoeBoardComponent implements OnInit {
         this.game.resetGame(this.squares);
       }
 
+      // checks if tictactoe board is full
       let checkFull = this.game.checkIfFieldIsFull(this.squares);
       if (checkFull) {
         alert("Unendschieden");
         this.game.resetGame(this.squares);
       }
+
+      // sends the current player turn to parent, to display the name
+      this.onChangePlayerTurnChildEvent.emit(squareClass.state);
   }
 
 }

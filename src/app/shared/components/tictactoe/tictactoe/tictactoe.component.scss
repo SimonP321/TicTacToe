@@ -2,4 +2,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .title {
+        margin-top: 8%;
+    }
+
+    .matchfield {
+        width: 100%;
+        margin-top: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            margin: 0 10%;
+            font-size: 50%;
+            width: 10%;
+        }
+
+        .userOne {
+            font-size: 150%;
+            color: blue;
+        }
+
+        .userTwo {
+            font-size: 150%;
+            color: blue;
+        }
+    }
 }

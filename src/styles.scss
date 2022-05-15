@@ -1,7 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/utilities/variables.scss";
+
+@font-face {
+    font-family: roboto;
+    src: url(assets/fonts/roboto/Roboto-Light.ttf) format("opentype");
+  }
+
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     background: linear-gradient(90deg, rgba(215,219,222,1) 0%, rgba(242,246,252,1) 100%);
+    font-size: 32px;
+    font-family: 'roboto';
+
+    input {
+        padding: 25px 10px;
+        font-size: 32px;
+        border: solid 1px $border-color;
+    }
+
+    input[type='submit'] {
+        background-color: $dark-blue;
+        color: #f6f6f6;
+    }
+
+    .title {
+        font-size: 64px;
+        color: $dark-blue;
+    }
+
+    select {
+        padding: 8px 5px;
+        font-size: 32px;
+    }
 }

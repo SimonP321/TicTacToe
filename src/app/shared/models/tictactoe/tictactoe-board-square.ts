@@ -8,8 +8,6 @@ export class TictactoeSquare {
   name: string | undefined;
   symbol: string | undefined;
 
-  stateRef: typeof State = State;
-
   constructor() {
   }
 
