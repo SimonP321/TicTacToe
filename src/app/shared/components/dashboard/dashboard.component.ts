@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
 
 
   onPlay(form: NgForm) {
-    /* this.router.navigate(['tictactoe', {userOne: String(form.value.userOne), symbolOne: String(form.value.symbolOne), userTwo: String(form.value.userTwo), symbolTwo: String(form.value.symbolTwo)}]); */ // TODO funktioniert nicht (kp warum)
+    /* this.router.navigate(['tictactoe', {userOne: String(form.value.userOne), symbolOne: String(form.value.symbolOne), userTwo: String(form.value.userTwo), symbolTwo: String(form.value.symbolTwo)}]); */ // TODO funktioniert nicht: optionale routing parameter (kp warum)
     let userOne = String(form.value.userOne);
     let symbolOne = String(form.value.symbolOne);
     let userTwo = String(form.value.userTwo);
