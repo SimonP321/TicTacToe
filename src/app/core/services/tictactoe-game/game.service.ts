@@ -33,6 +33,16 @@ export class GameService {
     return State.EMPTY;
   }
 
+  resetGame(squares: TictactoeSquare[][]) {
+    for(let index of squares) {
+      for(let square of index) {
+        if (square.state != State.EMPTY) {
+          square.state = State.EMPTY;
+        }
+      }
+    }
+  }
+
   private checkDiagonalWin(squares: TictactoeSquare[][]): State {
     let squareRoot = squares.length;
     let firstSquare = squares[0][0];
@@ -76,7 +86,7 @@ export class GameService {
 
       // check horizontal
       for(let square = 1; square < squareRoot; square++) {
-                if (firstRow.state != State.EMPTY && firstRow.state == squares[i][square].state) {
+        if (firstRow.state != State.EMPTY && firstRow.state == squares[i][square].state) {
           if (square == squareRoot - 1) {
             return firstRow.state;
           } else {

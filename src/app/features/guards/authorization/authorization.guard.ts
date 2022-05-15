@@ -19,7 +19,6 @@ export class AuthorizationGuard implements CanActivate {
         this.router.navigate(['login']);
       }
 
-      /* this.authService.removeAuthorization(); */ // TODO with timer (vl. observable)
       return isAuth;
   }
   

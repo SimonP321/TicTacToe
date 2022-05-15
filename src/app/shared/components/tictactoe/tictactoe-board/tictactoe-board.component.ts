@@ -56,14 +56,23 @@ export class TictactoeBoardComponent implements OnInit {
 
       let checkWinner = this.game.checkIfSomeoneWins(this.squares);
       if (checkWinner != State.EMPTY) {
-        // winner
-        let s = 0;
+        let message = "Spieler ";
+        
+        if (checkWinner == State.USERONE) {
+          message += this.userOne
+        } else {
+          message += this.userTwo
+        }
+
+        message += " hat das Spiel gewonnen";
+        alert(message);
+        this.game.resetGame(this.squares);
       }
 
       let checkFull = this.game.checkIfFieldIsFull(this.squares);
       if (checkFull) {
-        // unendschieden
-        let s = 0;
+        alert("Unendschieden");
+        this.game.resetGame(this.squares);
       }
   }
 
