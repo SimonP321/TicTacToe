@@ -3,7 +3,7 @@
 
     <form (ngSubmit)="onLogin(signInForm)" #signInForm="ngForm">
         <label>Passwort</label>
-        <input type="password" name="password" ngModel>
+        <input type="password" name="password" required ngModel>
         <input type="submit" value="Anmelden">
     </form>
 </div>
