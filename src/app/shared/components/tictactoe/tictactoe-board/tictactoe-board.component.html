@@ -4,8 +4,8 @@
 
             <div class="square" (click)="onChangePlayerTurn(squareClass)">
                 <ng-container [ngSwitch]='squareClass.state'>
-                    <img *ngSwitchCase="stateRef.USERONE" src="{{'../../../../../assets/symbols/' + symbolOne + '.png'}}">
-                    <img *ngSwitchCase="stateRef.USERTWO" src="{{'../../../../../assets/symbols/' + symbolTwo + '.png'}}">
+                    <img *ngSwitchCase="stateRef.USERONE" src="{{'assets/symbols/' + symbolOne + '.png'}}">
+                    <img *ngSwitchCase="stateRef.USERTWO" src="{{'assets/symbols/' + symbolTwo + '.png'}}">
                 </ng-container>
             </div>
 
