@@ -2,3 +2,5 @@
 - nicht beide spieler das selbe symbol/namen ermöglichen
 - optionale routing parameter mit einbauen
 - resposive
+- cookie nach eine bestimmten zeit löschen
+- environment.ts mit git.ignore ausschließen (ist beim passwort 123456 egal)
