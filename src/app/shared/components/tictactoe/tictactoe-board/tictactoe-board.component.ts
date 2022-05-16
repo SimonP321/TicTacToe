@@ -13,7 +13,7 @@ export class TictactoeBoardComponent implements OnInit {
 
   squareNumber: number = 9;
   squareRoot: number = Math.floor(Math.sqrt(this.squareNumber));
-  playerOneTurn: boolean = false;
+  playerOneTurn: boolean = true;
   readonly squares: TictactoeSquare[][] = [];
 
   userOne: string = "";
@@ -49,13 +49,17 @@ export class TictactoeBoardComponent implements OnInit {
     if (squareClass.state != State.EMPTY)
       return;
 
+      let nextTurn;
+
       // changes the player turn
       if (this.playerOneTurn) {
         squareClass.state = State.USERONE;
+        nextTurn = State.USERTWO;
         this.playerOneTurn = false;
       } else {
         squareClass.state = State.USERTWO;
         this.playerOneTurn = true;
+        nextTurn = State.USERONE;
       }
 
       // checks if someone won
@@ -72,8 +76,9 @@ export class TictactoeBoardComponent implements OnInit {
         message += " hat das Spiel gewonnen";
         alert(message);
         this.game.resetGame(this.squares);
-        this.onChangePlayerTurnChildEvent.emit(State.USERONE);
-        return;
+
+        nextTurn = State.USERONE;
+        this.playerOneTurn = true;
       }
 
       // checks if tictactoe board is full
@@ -81,12 +86,13 @@ export class TictactoeBoardComponent implements OnInit {
       if (checkFull) {
         alert("Unendschieden");
         this.game.resetGame(this.squares);
-        this.onChangePlayerTurnChildEvent.emit(State.USERONE);
-        return;
+
+        nextTurn = State.USERONE;
+        this.playerOneTurn = true;
       }
 
       // sends the current player turn to parent, to display the name
-      this.onChangePlayerTurnChildEvent.emit(squareClass.state);
+      this.onChangePlayerTurnChildEvent.emit(nextTurn);
   }
 
 }
