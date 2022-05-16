@@ -1,0 +1,4 @@
+- button/input farbig/alert bei falschem input text (password, leerer namen)
+- nicht beide spieler das selbe symbol/namen ermöglichen
+- optionale routing parameter mit einbauen
+- resposive

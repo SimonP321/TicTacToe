@@ -72,6 +72,8 @@ export class TictactoeBoardComponent implements OnInit {
         message += " hat das Spiel gewonnen";
         alert(message);
         this.game.resetGame(this.squares);
+        this.onChangePlayerTurnChildEvent.emit(State.USERONE);
+        return;
       }
 
       // checks if tictactoe board is full
@@ -79,6 +81,8 @@ export class TictactoeBoardComponent implements OnInit {
       if (checkFull) {
         alert("Unendschieden");
         this.game.resetGame(this.squares);
+        this.onChangePlayerTurnChildEvent.emit(State.USERONE);
+        return;
       }
 
       // sends the current player turn to parent, to display the name
