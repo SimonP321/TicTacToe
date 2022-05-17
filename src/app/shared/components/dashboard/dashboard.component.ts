@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
       { "name": "kreis" },
       { "name": "kreuz" },
       { "name": "plus" },
-      { "name": "gefuelltestKreuz" },
+      { "name": "gefuelltesKreuz" },
       { "name": "gefuellterKreis" },
       { "name": "viereck" },
       { "name": "dreieck" }
