@@ -1,7 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 import { GameService } from 'src/app/core/services/tictactoe-game/game.service';
 import { State } from 'src/app/shared/models/enums/ESquare';
+import { IUser } from 'src/app/shared/models/interfaces/IUser';
 import { TictactoeSquare } from '../../../models/tictactoe/tictactoe-board-square';
 
 @Component({
@@ -16,23 +17,18 @@ export class TictactoeBoardComponent implements OnInit {
   playerOneTurn: boolean = true;
   readonly squares: TictactoeSquare[][] = [];
 
-  userOne: string = "";
-  symbolOne: string = "";
-  userTwo: string = "";
-  symbolTwo: string = "";
+  public userData: IUser[] = [];
+
   stateRef: typeof State = State;
 
   @Output() public onChangePlayerTurnChildEvent = new EventEmitter();
 
   constructor(private game: GameService, private activatedRoute: ActivatedRoute) {
 
-    }
+  }
 
   ngOnInit(): void {
-    this.userOne = this.activatedRoute.snapshot.paramMap.get('userOne') as string;
-    this.symbolOne = this.activatedRoute.snapshot.paramMap.get('symbolOne') as string;
-    this.userTwo = this.activatedRoute.snapshot.paramMap.get('userTwo') as string;
-    this.symbolTwo = this.activatedRoute.snapshot.paramMap.get('symbolTwo') as string;
+    this.activatedRoute.data.subscribe(data => this.userData = (data[0] as IUser[]));
 
     for(let r = 0; r < this.squareRoot; r++) {
       this.squares[r] = [];
@@ -68,9 +64,9 @@ export class TictactoeBoardComponent implements OnInit {
         let message = "Spieler ";
         
         if (checkWinner == State.USERONE) {
-          message += this.userOne
+          message += this.userData[0].user;
         } else {
-          message += this.userTwo
+          message += this.userData[1].user;
         }
 
         message += " hat das Spiel gewonnen";
